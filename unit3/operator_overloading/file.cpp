@@ -98,3 +98,32 @@ using namespace std;
 
 
 //overloading binary operators
+
+class demo{
+    int x;
+    public :
+        void getX(){
+            cout << "Enter x: " ;
+            cin >> x ;
+        }
+        void printX(){
+            cout << x << endl ;
+        }
+
+        void operator++(int){
+            x = x+1;
+        }
+};
+
+int main(){
+    demo obj;
+    obj.getX();
+    cout << "Original value: ";
+    obj.printX();
+    //++ obj;
+     obj++;
+    cout << "Modified value: ";
+    obj.printX();
+
+    return 0;
+}
